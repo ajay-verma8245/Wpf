@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAnimatingPath.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAnimatingPath"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Window.Resources>
+        <Storyboard x:Key="pointAnimationBoard">
+            <PointAnimation RepeatBehavior="Forever" AutoReverse="True" From="70, 20" To="70, 140"
+                            Storyboard.TargetName="qbs1" Storyboard.TargetProperty="Point1" />
+            <PointAnimation RepeatBehavior="Forever" AutoReverse="True" From="110, 140" To="110, 20"
+                            Storyboard.TargetName="qbs2" Storyboard.TargetProperty="Point1" />
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Path Stroke="BlueViolet" StrokeThickness="2">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="30, 80">
+                            <LineSegment Point="50, 80" />
+                            <QuadraticBezierSegment x:Name="qbs1" Point1="70,20" Point2="90,80" />
+                            <QuadraticBezierSegment x:Name="qbs2" Point1="110,140" Point2="130,80" />
+                            <LineSegment Point="150, 80" />
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Button Content="Start" Margin="0,170,0,0" x:Name="btnStartAnimation" Click="btnStartAnimation_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2394019F-6295-41E3-BFC2-8795782BDA41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfCustomValidation</RootNamespace>
+    <AssemblyName>WpfCustomValidation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ImageWindow.xaml.cs">
+      <DependentUpon>ImageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\AgeValidation.cs" />
+    <Page Include="ImageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Child.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1.jpg" />
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\2.jpg" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.jpg" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\3d-HD-Wallpapers-1080p2_ByMZT0E.jpg" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\6795640-game-wallpapers-hd.jpg" />
+    <Resource Include="Images\AamirKhan.jpg" />
+    <Resource Include="Images\Age of Empire.jpg" />
+    <Resource Include="Images\aishwarya-rai.jpg" />
+    <Resource Include="Images\akki.jpg" />
+    <Resource Include="Images\amitabh-bachchan.jpg" />
+    <Resource Include="Images\amrita.jpg" />
+    <Resource Include="Images\arshad warsi.jpg" />
+    <Resource Include="Images\Beauty.jpg" />
+    <Resource Include="Images\Blue eyes.jpg" />
+    <Resource Include="Images\cool-wallpaper-10.jpg" />
+    <Resource Include="Images\cool-wallpaper-14.jpg" />
+    <Resource Include="Images\Deepika.jpg" />
+    <Resource Include="Images\download.jpg" />
+    <Resource Include="Images\emma.jpg" />
+    <Resource Include="Images\faith.jpg" />
+    <Resource Include="Images\full-hd-game-wallpaper-13.jpg" />
+    <Resource Include="Images\Games-Wallpaper-HD-66.jpg" />
+    <Resource Include="Images\gears-of-war-3.jpg" />
+    <Resource Include="Images\Green eyes.jpg" />
+    <Resource Include="Images\green-abstract-hd-1080p-wallpapers-153-1024x576.jpg" />
+    <Resource Include="Images\HarleyQuinnPoster.jpg" />
+    <Resource Include="Images\hd-high-definition-wallpapers-71.jpg" />
+    <Resource Include="Images\HD-Skull-Wallpapers-3.jpg" />
+    <Resource Include="Images\hd-wallpaper-1366x768.jpg" />
+    <Resource Include="Images\Hrithik.jpg" />
+    <Resource Include="Images\huge-hd-wallpaper-7-1024x576.jpg" />
+    <Resource Include="Images\hybrid-weapon_wide.jpg" />
+    <Resource Include="Images\images.jpeg" />
+    <Resource Include="Images\IMG-20150718-WA0008.jpg" />
+    <Resource Include="Images\katrina.jpg" />
+    <Resource Include="Images\lion_hd_wallpaper_1.jpg" />
+    <Resource Include="Images\Love-Wallpapers-Desktop-HD-Wallpaper-1080x607.jpg" />
+    <Resource Include="Images\maxresdefault.jpg" />
+    <Resource Include="Images\monicabellucci.jpg" />
+    <Resource Include="Images\PONCHO.jpg" />
+    <Resource Include="Images\riya-sen.jpg" />
+    <Resource Include="Images\sallu.jpg" />
+    <Resource Include="Images\sample.jpeg" />
+    <Resource Include="Images\Shah-Rukh-Khan.jpg" />
+    <Resource Include="Images\smile.jpg" />
+    <Resource Include="Images\t5IkwK.jpg" />
+    <Resource Include="Images\the kite runner.jpg" />
+    <Resource Include="Images\the_nurses_song.gif" />
+    <Resource Include="Images\tm1.jpg" />
+    <Resource Include="Images\tm2.jpg" />
+    <Resource Include="Images\tm3.jpg" />
+    <Resource Include="Images\tm4.jpg" />
+    <Resource Include="Images\tm5.jpg" />
+    <Resource Include="Images\tm6.jpg" />
+    <Resource Include="Images\TomCruise.jpg" />
+    <Resource Include="Images\tumblr_nsbocrtvEY1qe9as7o1_500.jpg" />
+    <Resource Include="Images\wallpaper.jpg" />
+    <Resource Include="Images\WDF_2455457.jpg" />
+    <Resource Include="Images\WDF_2455609.jpg" />
+    <Resource Include="Images\windows-10-wallpapers-hd-wallpapers-for-desktop.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfUserControlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfUserControlDemo"
+        mc:Ignorable="d"
+        xmlns:uc="clr-namespace:WpfUserControlDemo.Controls"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <!--<uc:Timer Height="50" />-->
+        <StackPanel.Resources>
+            <ControlTemplate x:Key="CheckBoxTemplate" TargetType="CheckBox">
+                <Canvas Background="{TemplateBinding Background}" Height="{TemplateBinding Height}">
+                    <TextBlock x:Name="x" Text="XXXXXXXXXXXXXXXXXXXXXXXX" FontSize="24" Opacity=".3"
+                               Canvas.Top="-5"/>
+                    <TextBlock Text="{TemplateBinding Content}" />
+                </Canvas>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="CheckBox.IsChecked" Value="True">
+                        <Setter Property="Opacity" Value="1" TargetName="x" />
+                    </Trigger>
+                    <Trigger Property="CheckBox.IsChecked" Value="False">
+                        <Setter Property="Opacity" Value="0" TargetName="x" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </StackPanel.Resources>
+
+        <CheckBox Template="{StaticResource CheckBoxTemplate}" Background="Aquamarine" Height="20" Content="How about a game of Chess?" />
+
+    </StackPanel>
+</Window>

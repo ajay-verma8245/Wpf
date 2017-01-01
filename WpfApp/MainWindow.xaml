@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,0,-21">
+        <Button x:Name="btnShowMessage" Content="Show Message" HorizontalAlignment="Left"                
+                Click="btnShowMessage_Click"
+                VerticalAlignment="Top" Width="132" Margin="354,125,0,0" Height="42"  />
+
+        <Image x:Name="imageFade" Stretch="UniformToFill"
+               Source="/WpfApp;component/Images/lady.jpg" VerticalAlignment="Stretch" 
+               Margin="10,0,297,0" MouseLeave="imageFade_MouseLeave" MouseEnter="imageFade_MouseEnter"/>
+
+    </Grid>
+</Window>

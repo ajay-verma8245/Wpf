@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfFlowDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFlowDocument"
+        mc:Ignorable="d"
+        xmlns:annot="clr-namespace:System.Windows.Annotations;assembly=PresentationFramework"
+        Title="MainWindow" Height="350" Width="350"
+        Initialized="Window_Initialized" Closed="Window_Closed">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="120" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal">
+        <FlowDocumentReader x:Name="flowDocument">
+            <FlowDocument>
+                <Paragraph FontWeight="Bold" FontSize="32">
+                    Baigné noyé l'ouragan fleurs pantheres furieux un embaumé et j'aurais navrantes de échouages marais 
+                    et montait et dont qui des la qui de de lorsqu'a les parapets juillets au sur bruns cotons carcasse 
+                    j'aille cloués lieues roulant des pôles je fleuves vers un énormes vogueur hanses de peuple ouverts 
+                    comme sans si les cataractant par un une triomphants la plein que sures houle sourd peaux-rouges
+                    enivrantes rutilements faisait des vogueur que frissons courus golfes bateau et et parapets ciel
+                    un a de froide - j'ai doux confiture dans bleme des aubes coup les aux un délirants braises suivi
+                    comme de des pussent tu yeux l'ouragan figements immobilités pas sidéraux brides traverser cerveaux
+                    circulation puis troupeaux qui descend les yeux aux pommes porteur seves bords vos les pleuré aux par
+                    les et au la ultramarins d'eau j'étais travers vers navrantes courus geindre cibles éblouies de l'europe
+                    triques fond nacreux bleus dans
+                </Paragraph>
+                <Paragraph>
+                    Baigné noyé l'ouragan fleurs pantheres furieux un embaumé et j'aurais navrantes de échouages marais 
+                    et montait et dont qui des la qui de de lorsqu'a les parapets juillets au sur bruns cotons carcasse 
+                    j'aille cloués lieues roulant des pôles je fleuves vers un énormes vogueur hanses de peuple ouverts 
+                    comme sans si les cataractant par un une triomphants la plein que sures houle sourd peaux-rouges
+                    enivrantes rutilements faisait des vogueur que frissons courus golfes bateau et et parapets ciel
+                    un a de froide - j'ai doux confiture dans bleme des aubes coup les aux un délirants braises suivi
+                    comme de des pussent tu yeux l'ouragan figements immobilités pas sidéraux brides traverser cerveaux
+                    circulation puis troupeaux qui descend les yeux aux pommes porteur seves bords vos les pleuré aux par
+                    les et au la ultramarins d'eau j'étais travers vers navrantes courus geindre cibles éblouies de l'europe
+                    triques fond nacreux bleus dans
+                </Paragraph>
+                <Paragraph>
+                    Baigné noyé l'ouragan fleurs pantheres furieux un embaumé et j'aurais navrantes de échouages marais 
+                    et montait et dont qui des la qui de de lorsqu'a les parapets juillets au sur bruns cotons carcasse 
+                    j'aille cloués lieues roulant des pôles je fleuves vers un énormes vogueur hanses de peuple ouverts 
+                    comme sans si les cataractant par un une triomphants la plein que sures houle sourd peaux-rouges
+                    enivrantes rutilements faisait des vogueur que frissons courus golfes bateau et et parapets ciel
+                    un a de froide - j'ai doux confiture dans bleme des aubes coup les aux un délirants braises suivi
+                    comme de des pussent tu yeux l'ouragan figements immobilités pas sidéraux brides traverser cerveaux
+                    circulation puis troupeaux qui descend les yeux aux pommes porteur seves bords vos les pleuré aux par
+                    les et au la ultramarins d'eau j'étais travers vers navrantes courus geindre cibles éblouies de l'europe
+                    triques fond nacreux bleus dans
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+
+        <StackPanel>
+            <Button Content="Text Sticky Note" Command="annot:AnnotationService.CreateTextStickyNoteCommand"
+                    CommandTarget="{Binding ElementName=flowDocument}"></Button>
+            <Button Content="Ink Sticky Note" Command="annot:AnnotationService.CreateInkStickyNoteCommand"
+                    CommandTarget="{Binding ElementName=flowDocument}"></Button>
+            <Button Content="Delete Sticky Note" Command="annot:AnnotationService.DeleteStickyNotesCommand"
+                    CommandTarget="{Binding ElementName=flowDocument}"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

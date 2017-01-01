@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfBindingExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBindingExample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>        
+        <Slider x:Name="imageSlider" Margin="0,0,0,30"
+                Maximum="800" Minimum="100" Value="250" LargeChange="20" />        
+        <Image Source="Images/screen.jpg" Width="{Binding ElementName=imageSlider, Path=Value}" Height="{Binding ElementName=imageSlider, Path=Value}" />
+    </StackPanel>
+</Window>

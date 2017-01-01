@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfControlVideo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlVideo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="480" MinWidth="480">
+    <Grid>      
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="2*"/>
+            <RowDefinition Height="1*" MaxHeight="50" />
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="myVideoMedia" />
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="MinWidth" Value="120" />
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel.Triggers>
+                <EventTrigger RoutedEvent="Button.Click" SourceName="btnPlay">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard x:Name="beginPlayStory">
+                            <Storyboard>
+                                <MediaTimeline Source="Videos/Unity3d.mp4" Storyboard.TargetName="myVideoMedia" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.Click" SourceName="btnPause">
+                    <EventTrigger.Actions>
+                        <PauseStoryboard BeginStoryboardName="beginPlayStory" />
+                    </EventTrigger.Actions> 
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.Click" SourceName="btnResume">
+                    <EventTrigger.Actions>
+                        <ResumeStoryboard BeginStoryboardName="beginPlayStory" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.Click" SourceName="btnStop">
+                    <EventTrigger.Actions>
+                        <StopStoryboard BeginStoryboardName="beginPlayStory" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </StackPanel.Triggers>
+            <Button x:Name="btnPlay">Play</Button>
+            <Button x:Name="btnPause">Pause</Button>
+            <Button x:Name="btnResume">Resume</Button>
+            <Button x:Name="btnStop">Stop</Button>            
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfAttachedProperty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAttachedProperty"
+        mc:Ignorable="d"        
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:ThresholdRuleConverter x:Key="ruleConverter" />
+    </Window.Resources>
+    <StackPanel>
+
+        <TextBox x:Name="txtAmount" Text="{Binding Path=ItemAmount}"
+                 HorizontalAlignment="Stretch"
+                 Tag="{Binding Path=ItemAmount, Mode=OneTime}" Height="35" FontSize="22"
+                 Canvas.Top="{Binding Path=Threshold}">
+            <TextBox.Background>
+                <MultiBinding Converter="{StaticResource ruleConverter}" ConverterParameter="Red,Yellow,Green">
+                    <Binding Mode="OneWay" RelativeSource="{RelativeSource Self}" Path="Tag" />
+                    <Binding Mode="OneWay" RelativeSource="{RelativeSource Self}" Path="(Canvas.Top)" />
+                    <Binding Mode="OneWay" RelativeSource="{RelativeSource Self}" Path="Text" />
+                </MultiBinding>
+            </TextBox.Background>
+        </TextBox>
+
+    </StackPanel>
+</Window>
