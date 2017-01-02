@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAnimatingPath", "WpfAnim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlternation", "WpfAlternation\WpfAlternation.csproj", "{D0BAA731-29D5-44A5-B655-81D667490E4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMotionPath", "WpfMotionPath\WpfMotionPath.csproj", "{7F705FA8-E586-4B72-BB04-6F8536CA1C93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{D0BAA731-29D5-44A5-B655-81D667490E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0BAA731-29D5-44A5-B655-81D667490E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0BAA731-29D5-44A5-B655-81D667490E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F705FA8-E586-4B72-BB04-6F8536CA1C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F705FA8-E586-4B72-BB04-6F8536CA1C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F705FA8-E586-4B72-BB04-6F8536CA1C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F705FA8-E586-4B72-BB04-6F8536CA1C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
